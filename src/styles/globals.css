@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Custom styles */
+body {
+    @apply bg-black text-white;    
+    
+}
+
+@media screen and (max-width: 800px) {
+    .text {
+        font-size: 10px !important;
+    }
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.animate-marquee {
+    animation: marquee 15s linear infinite;
+}
+
+/* Custom animation for text shimmer effect */
+@keyframes textShimmer {
+    0% {
+        background-position: -300%;
+    }
+
+    100% {
+        background-position: 300%;
+    }
+}
+
+.text-shimmer {
+    background: linear-gradient(90deg, #FFF 0%, #fff78b 50%, #9041ff 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    
+    animation: textShimmer 7s linear infinite;
+}
