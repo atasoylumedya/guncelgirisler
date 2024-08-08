@@ -3,8 +3,8 @@
   publish = ".next"
 
 [build.environment]
-  NODE_VERSION = "16.x"
-  YARN_VERSION = "1.22.x"
+  NODE_VERSION = "16.20.0"
+  YARN_VERSION = "1.22.19"
 
 [[redirects]]
   from = "/*"
